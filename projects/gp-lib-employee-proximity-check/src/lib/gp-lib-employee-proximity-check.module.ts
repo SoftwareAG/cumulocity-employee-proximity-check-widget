@@ -6,7 +6,7 @@ import { MatSortModule, MatInputModule, MatFormFieldModule,MatTableModule, MatBu
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProximityCheckConfigComponent } from './gp-lib-employee-proximity-check-config.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import * as preview from './preview-image';
 
 @NgModule({
   declarations: [GpLibEmployeeProximityCheckComponent, ProximityCheckConfigComponent],
@@ -31,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     useValue: {
         id: 'proximity.widget',
         label: 'Employee Proximity Check',
+        previewImage: preview.previewImage,
         description: 'Proximity  Dashboard - Displays interaction of Employee with other employees',
         component: GpLibEmployeeProximityCheckComponent,
         configComponent: ProximityCheckConfigComponent,

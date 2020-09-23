@@ -5,7 +5,9 @@ import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { from, Subject, Observable, interval } from 'rxjs';
 import { skip, takeUntil } from 'rxjs/operators';
-import * as moment from 'moment';
+import * as moment_ from 'moment';
+const moment = moment_;
+
 import { AppStateService } from '@c8y/ngx-components';
 
 @Component({

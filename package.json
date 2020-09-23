@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "buildPatch": "cd projects/gp-lib-employee-proximity-checl && npm version patch && ng build gp-lib-employee-proximity-checl && cd ../../ && cd ./dist/gp-lib-employee-proximity-checl && npm pack && move *.tgz ../",
-    "buildMinor": "cd projects/gp-lib-employee-proximity-checl && npm version minor && ng build gp-lib-employee-proximity-checl && cd ../../ && cd ./dist/gp-lib-employee-proximity-checl && npm pack && move *.tgz ../",
-    "buildMajor": "cd projects/gp-lib-employee-proximity-checl && npm version major && ng build gp-lib-employee-proximity-checl && cd ../../ && cd ./dist/gp-lib-employee-proximity-checl && npm pack && move *.tgz ../",
-    "serve": "ng build gp-lib-employee-proximity-checl && npm i dist/gp-lib-employee-proximity-checl && ng s"
+    "buildPatch": "cd projects/gp-lib-employee-proximity-check && npm version patch && ng build gp-lib-employee-proximity-check && cd ../../ && cd ./dist/gp-lib-employee-proximity-check && npm pack && move *.tgz ../",
+    "buildMinor": "cd projects/gp-lib-employee-proximity-check && npm version minor && ng build gp-lib-employee-proximity-check && cd ../../ && cd ./dist/gp-lib-employee-proximity-check && npm pack && move *.tgz ../",
+    "buildMajor": "cd projects/gp-lib-employee-proximity-check && npm version major && ng build gp-lib-employee-proximity-check && cd ../../ && cd ./dist/gp-lib-employee-proximity-check && npm pack && move *.tgz ../",
+    "serve": "ng build gp-lib-employee-proximity-check && npm i dist/gp-lib-employee-proximity-check && ng s"
   },
   "private": true,
   "dependencies": {

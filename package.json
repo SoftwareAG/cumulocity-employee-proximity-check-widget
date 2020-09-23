@@ -7,11 +7,16 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "buildPatch": "cd projects/gp-lib-employee-proximity-checl && npm version patch && ng build gp-lib-employee-proximity-checl && cd ../../ && cd ./dist/gp-lib-employee-proximity-checl && npm pack && move *.tgz ../",
+    "buildMinor": "cd projects/gp-lib-employee-proximity-checl && npm version minor && ng build gp-lib-employee-proximity-checl && cd ../../ && cd ./dist/gp-lib-employee-proximity-checl && npm pack && move *.tgz ../",
+    "buildMajor": "cd projects/gp-lib-employee-proximity-checl && npm version major && ng build gp-lib-employee-proximity-checl && cd ../../ && cd ./dist/gp-lib-employee-proximity-checl && npm pack && move *.tgz ../",
+    "serve": "ng build gp-lib-employee-proximity-checl && npm i dist/gp-lib-employee-proximity-checl && ng s"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.4",
+    "@angular/cdk": "8.2.3",
     "@angular/common": "~8.2.4",
     "@angular/compiler": "~8.2.4",
     "@angular/core": "~8.2.4",
@@ -19,12 +24,24 @@
     "@angular/platform-browser": "~8.2.4",
     "@angular/platform-browser-dynamic": "~8.2.4",
     "@angular/router": "~8.2.4",
+    "@angular/material": "^8.2.3",
+    "@c8y/ng1-modules": "1006.6.8",
+    "@c8y/ngx-components": "1006.6.8",
+    "@c8y/client": "1006.3.0",
+    "@c8y/style": "1006.6.8",
+    "@angular/upgrade": "8.2.13",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "core-js": "^2.5.4",
+    "fontawesome": "4.7.2",
+    "ngx-bootstrap": "5.5.0",
+    "material-design-icons": "^3.0.1",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.2",
+    "@angular-devkit/build-ng-packagr": "~0.803.29",
     "@angular/cli": "~8.3.2",
     "@angular/compiler-cli": "~8.2.4",
     "@angular/language-service": "~8.2.4",
@@ -39,8 +56,10 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.4.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   }

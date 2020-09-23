@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "gp-lib-employee-proximity-check": {
+      "projectType": "library",
+      "root": "projects/gp-lib-employee-proximity-check",
+      "sourceRoot": "projects/gp-lib-employee-proximity-check/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/gp-lib-employee-proximity-check/tsconfig.lib.json",
+            "project": "projects/gp-lib-employee-proximity-check/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gp-lib-employee-proximity-check/src/test.ts",
+            "tsConfig": "projects/gp-lib-employee-proximity-check/tsconfig.spec.json",
+            "karmaConfig": "projects/gp-lib-employee-proximity-check/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gp-lib-employee-proximity-check/tsconfig.lib.json",
+              "projects/gp-lib-employee-proximity-check/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "gp-employee-proximity-check"
 }

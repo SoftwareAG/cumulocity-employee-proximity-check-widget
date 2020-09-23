@@ -1,0 +1,46 @@
+
+<div style ="float: right; margin-right: 10px;">
+  <button type="button" class="btn btn-link c8y-realtime" title="Toggle realtime" (click)="toggle()" >
+    <span [ngClass]="realtimeState?'c8y-pulse active' : 'c8y-pulse inactive'" ></span>
+    <span >Realtime</span>
+  </button>
+    <button mat-icon-button style="color:#1776BF;" type="button" [disabled]="callAPI" class="button" (click)="refresh()" disabled><span class="fa fa-refresh"></span></button><br>
+</div>
+<br>
+<div class="div-row2">
+    <mat-form-field appearance="outline">
+    <input matInput placeholder="Unique Id" [(ngModel)] = "searchDeviceName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput type = "number" min="1" placeholder=" Days" [(ngModel)] = "providedDays" >
+      </mat-form-field>
+        <button class="search-button" mat-raised-button color="primary" (click)="refresh()">Search</button>
+        <button class="search-button" mat-raised-button color="primary" (click)="exportReport()">Email Report</button>
+
+</div>
+  <div>
+
+    <table mat-table [dataSource]="dataSource" matSort>
+     <!-- proximitEmployeeName Column -->
+      <ng-container matColumnDef="proximitEmployeeName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Employee Proximity Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.proximitEmployeeName}} </td>
+      </ng-container>
+      <!-- Time Count Column -->
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.time | date:'yyyy-MMMM-dd HH:mm:ss '}}</td>
+      </ng-container>
+      <!-- proximitEmployeeId Column -->
+      <!-- <ng-container matColumnDef="proximitEmployeeId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Proximity Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.proximitEmployeeId}} </td>
+      </ng-container> -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSize]="20" [pageSizeOptions]="[5, 10, 15, 20]" showFirstLastButtons></mat-paginator>
+  
+  
+  </div>
+  

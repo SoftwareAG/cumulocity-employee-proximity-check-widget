@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "gp-lib-employee-proximity-check": [
+        "dist/gp-lib-employee-proximity-check"
+      ],
+      "gp-lib-employee-proximity-check/*": [
+        "dist/gp-lib-employee-proximity-check/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

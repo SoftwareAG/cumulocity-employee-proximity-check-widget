@@ -246,7 +246,7 @@ git clone  https://labcase.softwareag.com/labcase/gp-proximity-check.git
 ```
 2. Change directory:
 
-  ```cd gp-proximity-check.git```
+  ```cd gp-proximity-check```
 
 3. run npm i command to install all library files specified in source code
 
@@ -290,7 +290,7 @@ This guide will teach you how to add a widget in your existing or new dashboard.
 
 
 
-Congratulations! Employee Grid Widget is configured.
+Congratulations! Employee Proximity Check Widget is configured.
   
 ## User Guide
 

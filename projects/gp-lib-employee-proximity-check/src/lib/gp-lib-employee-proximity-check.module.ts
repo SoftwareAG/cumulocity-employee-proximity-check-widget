@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProximityCheckConfigComponent } from './gp-lib-employee-proximity-check-config.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import * as preview from './preview-image';
-
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [GpLibEmployeeProximityCheckComponent, ProximityCheckConfigComponent],
   imports: [
@@ -25,6 +25,7 @@ import * as preview from './preview-image';
   entryComponents: [GpLibEmployeeProximityCheckComponent, ProximityCheckConfigComponent ],
 
   providers: [
+    DatePipe,
     {
     provide: HOOK_COMPONENTS,
     multi: true,

@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/gp-lib-employee-proximity-check",
+  "dest": "../../dist/gp-employee-proximity-check",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

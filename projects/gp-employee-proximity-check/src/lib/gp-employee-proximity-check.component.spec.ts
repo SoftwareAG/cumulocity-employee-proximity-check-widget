@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GpLibEmployeeProximityCheckComponent } from './gp-lib-employee-proximity-check.component';
+import { GpLibEmployeeProximityCheckComponent } from './gp-employee-proximity-check.component';
 
 describe('GpLibEmployeeProximityCheckComponent', () => {
   let component: GpLibEmployeeProximityCheckComponent;

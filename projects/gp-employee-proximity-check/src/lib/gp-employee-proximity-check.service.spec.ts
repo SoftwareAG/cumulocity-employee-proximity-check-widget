@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GpLibEmployeeProximityCheckService } from './gp-lib-employee-proximity-check.service';
+import { GpLibEmployeeProximityCheckService } from './gp-employee-proximity-check.service';
 
 describe('GpLibEmployeeProximityCheckService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

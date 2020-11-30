@@ -1,0 +1,12 @@
+{
+  "name": "Employee Proximity Check Runtime Widget",
+  "contextPath": "gp-employee-proximity-check-runtime-widget",
+  "key": "gp-employee-proximity-check-runtime-widget-application-key",
+  "contentSecurityPolicy": "default-src 'self'",
+  "icon": {
+    "class": "fa fa-delicious"
+  },
+  "manifest": {
+    "noAppSwitcher": true
+  }
+}

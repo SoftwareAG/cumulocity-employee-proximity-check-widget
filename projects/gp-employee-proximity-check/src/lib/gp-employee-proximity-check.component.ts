@@ -1,3 +1,20 @@
+/**
+ * Copyright (c) 2020 Software AG, Darmstadt, Germany and/or its licensors
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 import { Component, OnInit, Input, ViewChild, ViewEncapsulation } from '@angular/core';
 import { InventoryService, EventService, IdentityService } from '@c8y/client';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
@@ -11,9 +28,9 @@ const moment = moment_;
 import { AppStateService } from '@c8y/ngx-components';
 
 @Component({
-  selector: 'lib-gp-lib-employee-proximity-check',
-  templateUrl : './gp-lib-employee-proximity-check.html',
-  styleUrls: ['gp-lib-employee-proximity-check.component.css'],
+  selector: 'lib-gp-employee-proximity-check',
+  templateUrl : './gp-employee-proximity-check.html',
+  styleUrls: ['gp-employee-proximity-check.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class GpLibEmployeeProximityCheckComponent implements OnInit {
@@ -97,14 +114,12 @@ export class GpLibEmployeeProximityCheckComponent implements OnInit {
        this.unsubscribeRealTime$.next();
      }
   }
-  // tslint:disable-next-line: use-lifecycle-interface
   ngOnDestroy() {
      this.unsubscribeRealTime$.next();
      this.unsubscribeRealTime$.complete();
   }
 
   async fetchEvents() {
-  // tslint:disable-next-line: triple-equals
   if (this.searchDeviceName != '' && this.providedDays != null) {
    this.TagsAtRisk.length = 0;
 
@@ -118,7 +133,6 @@ export class GpLibEmployeeProximityCheckComponent implements OnInit {
    this.deviceId = identitydetails.data.managedObject.id;
    const inventory = await this.inventory.detail(this.deviceId);
    this.response = inventory.data;
-   // tslint:disable-next-line: prefer-const
    let tempTags: Tags[] = [];
    const filter: object = {
       pageSize: 2000,
@@ -137,11 +151,8 @@ export class GpLibEmployeeProximityCheckComponent implements OnInit {
         const temp: Tags = {
           id: event.source.id,
           name: event.source.name,
-          // tslint:disable-next-line: max-line-length
           proximitEmployeeId: event.poximitTrackablesInternalIds === undefined ? event.proximityTrackablesInternalIds : event.poximitTrackablesInternalIds,
-          // tslint:disable-next-line: max-line-length
           proximitEmployeeName: event.poximiTrackableExternalIds === undefined ? event.proximityTrackableExternalIds : event.poximiTrackableExternalIds,
-          // tslint:disable-next-line: max-line-length
           proximitAssetId: event.poximitAssetTagInternalId === undefined ? event.proximityAssetTagInternalId : event.poximitAssetTagInternalId,
           type: event.type,
           time: event.time

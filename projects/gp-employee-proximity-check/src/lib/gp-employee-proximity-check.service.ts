@@ -18,7 +18,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class GpLibEmployeeProximityCheckService {
+export class GpEmployeeProximityCheckService {
 
   constructor() { }
 }

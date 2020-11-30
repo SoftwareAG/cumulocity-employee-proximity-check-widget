@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 import { NgModule } from '@angular/core';
-import { GpLibEmployeeProximityCheckComponent } from './gp-employee-proximity-check.component';
+import { GpEmployeeProximityCheckComponent } from './gp-employee-proximity-check.component';
 import {CoreModule, HOOK_COMPONENTS} from '@c8y/ngx-components';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule, MatInputModule, MatFormFieldModule,MatTableModule, MatButtonModule, MatPaginatorModule } from '@angular/material';
@@ -25,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import * as preview from './preview-image';
 import { DatePipe } from '@angular/common';
 @NgModule({
-  declarations: [GpLibEmployeeProximityCheckComponent, ProximityCheckConfigComponent],
+  declarations: [GpEmployeeProximityCheckComponent, ProximityCheckConfigComponent],
   imports: [
       CoreModule,
       HttpClientModule,
@@ -36,8 +36,8 @@ import { DatePipe } from '@angular/common';
       MatInputModule,
       MatFormFieldModule,
       ReactiveFormsModule  ],
-  exports: [GpLibEmployeeProximityCheckComponent, ProximityCheckConfigComponent],
-  entryComponents: [GpLibEmployeeProximityCheckComponent, ProximityCheckConfigComponent ],
+  exports: [GpEmployeeProximityCheckComponent, ProximityCheckConfigComponent],
+  entryComponents: [GpEmployeeProximityCheckComponent, ProximityCheckConfigComponent ],
 
   providers: [
     DatePipe,
@@ -49,7 +49,7 @@ import { DatePipe } from '@angular/common';
         label: 'Employee Proximity Check',
         previewImage: preview.previewImage,
         description: 'Proximity  Dashboard - Displays interaction of Employee with other employees',
-        component: GpLibEmployeeProximityCheckComponent,
+        component: GpEmployeeProximityCheckComponent,
         configComponent: ProximityCheckConfigComponent,
         data: {
             ng1: {
@@ -61,4 +61,4 @@ import { DatePipe } from '@angular/common';
     }
     }],
 })
-export class GpLibEmployeeProximityCheckModule { }
+export class GpEmployeeProximityCheckModule { }

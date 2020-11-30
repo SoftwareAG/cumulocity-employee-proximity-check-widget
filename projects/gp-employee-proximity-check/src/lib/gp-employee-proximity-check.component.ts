@@ -33,7 +33,7 @@ import { AppStateService } from '@c8y/ngx-components';
   styleUrls: ['gp-employee-proximity-check.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class GpLibEmployeeProximityCheckComponent implements OnInit {
+export class GpEmployeeProximityCheckComponent implements OnInit {
 
   @Input() config;
   @ViewChild(MatSort, { static: true }) sort: MatSort;

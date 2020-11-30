@@ -118,17 +118,17 @@ npm i <binary  file  path>/gp-lib-employee-proximity-check-1.0.1.tgz
 @import '~@c8y/style/main.less';
 @import '~@c8y/style/extend.less';
 ```
-6. Import  GpLibEmployeeProximityCheckModule in app.module.ts or custom creates a module for example cumulocity-app-builder\custom-widgets\custom-widgets.module.ts  and also place the imported Module under `@NgModule`.
+6. Import  GpEmployeeProximityCheckModule in app.module.ts or custom creates a module for example cumulocity-app-builder\custom-widgets\custom-widgets.module.ts  and also place the imported Module under `@NgModule`.
 
 ```
 
-import {GpLibEmployeeProximityCheckModule} from gp-lib-employee-proximity-check';
+import {GpEmployeeProximityCheckModule} from gp-employee-proximity-check';
 
 @NgModule({
 
   imports: [
 
-    GpLibEmployeeProximityCheckModule  
+    GpEmployeeProximityCheckModule  
 
       ]
 
@@ -174,13 +174,13 @@ npm run deploy
      Installation command: ```npm i moment@2.24.0 ``` 
 
 
-2. Grab the Employee Grid Widget **[Latest Release Binary]((https://labcase.softwareag.com/projects/gp-proximity-check/storage/show/Releases/gp-lib-employee-proximity-check-1.0.1.tgz)** (or)  create your own binary file by following  [Build Instructions
+2. Grab the Employee Grid Widget **[Latest Release Binary]((https://labcase.softwareag.com/projects/gp-proximity-check/storage/show/Releases/gp-employee-proximity-check-1.0.1.tgz)** (or)  create your own binary file by following  [Build Instructions
 ](## Build Instructions).
 
 3. Install the Binary file in the app builder.
 
 ```
-npm i <binary  file  path>/gp-lib-employee-proximity-check-1.0.1.tgz
+npm i <binary  file  path>/gp-employee-proximity-check-1.0.1.tgz
 ```
 
 **Note:** If you don't find the branding folder then please follow [Cumulocity Branding](https://cumulocity.com/guides/web/angular/#branding)
@@ -197,17 +197,17 @@ npm i <binary  file  path>/gp-lib-employee-proximity-check-1.0.1.tgz
 
   @import '~@c8y/style/extend.less';
   ```
-6. Import GpLibEmployeeGridModule in app.module.ts and also place the imported Module under `@NgModule`.
+6. Import GpEmployeeGridModule in app.module.ts and also place the imported Module under `@NgModule`.
 
   ```
 
-import {GpLibEmployeeProximityCheckModule} from gp-lib-employee-proximity-check';
+import {GpEmployeeProximityCheckModule} from gp-employee-proximity-check';
 
 @NgModule({
 
   imports: [
 
-    GpLibEmployeeProximityCheckModule  
+    GpEmployeeProximityCheckModule  
 
       ]
 

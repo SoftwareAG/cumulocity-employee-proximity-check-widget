@@ -19,7 +19,7 @@ import { NgModule } from '@angular/core';
 import { GpEmployeeProximityCheckComponent } from './gp-employee-proximity-check.component';
 import {CoreModule, HOOK_COMPONENTS} from '@c8y/ngx-components';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSortModule, MatInputModule, MatFormFieldModule,MatTableModule, MatButtonModule, MatPaginatorModule } from '@angular/material';
+import { MatSortModule, MatInputModule, MatFormFieldModule, MatTableModule, MatButtonModule, MatPaginatorModule } from '@angular/material';
 import { ProximityCheckConfigComponent } from './gp-employee-proximity-check-config.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import * as preview from './preview-image';

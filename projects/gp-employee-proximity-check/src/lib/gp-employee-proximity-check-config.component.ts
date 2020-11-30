@@ -18,7 +18,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'Employee-proximity-check-config',
+  selector: 'lib-employee-proximity-check-config',
   templateUrl: './gp-employee-proximity-check-config.component.html',
   styleUrls: ['./gp-employee-proximity-check-config.component.css']
 })

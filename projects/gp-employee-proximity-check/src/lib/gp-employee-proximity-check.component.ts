@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Component, OnInit, Input, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { InventoryService, EventService, IdentityService } from '@c8y/client';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
@@ -33,7 +33,7 @@ import { AppStateService } from '@c8y/ngx-components';
   styleUrls: ['gp-employee-proximity-check.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class GpEmployeeProximityCheckComponent implements OnInit {
+export class GpEmployeeProximityCheckComponent implements OnInit, OnDestroy {
 
   @Input() config;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
@@ -114,13 +114,14 @@ export class GpEmployeeProximityCheckComponent implements OnInit {
        this.unsubscribeRealTime$.next();
      }
   }
+
   ngOnDestroy() {
      this.unsubscribeRealTime$.next();
      this.unsubscribeRealTime$.complete();
   }
 
   async fetchEvents() {
-  if (this.searchDeviceName != '' && this.providedDays != null) {
+  if (this.searchDeviceName !== '' && this.providedDays != null) {
    this.TagsAtRisk.length = 0;
 
    this.AlertsCount = 0;
@@ -133,7 +134,7 @@ export class GpEmployeeProximityCheckComponent implements OnInit {
    this.deviceId = identitydetails.data.managedObject.id;
    const inventory = await this.inventory.detail(this.deviceId);
    this.response = inventory.data;
-   let tempTags: Tags[] = [];
+   const tempTags: Tags[] = [];
    const filter: object = {
       pageSize: 2000,
       withTotalPages: true,
@@ -151,9 +152,12 @@ export class GpEmployeeProximityCheckComponent implements OnInit {
         const temp: Tags = {
           id: event.source.id,
           name: event.source.name,
-          proximitEmployeeId: event.poximitTrackablesInternalIds === undefined ? event.proximityTrackablesInternalIds : event.poximitTrackablesInternalIds,
-          proximitEmployeeName: event.poximiTrackableExternalIds === undefined ? event.proximityTrackableExternalIds : event.poximiTrackableExternalIds,
-          proximitAssetId: event.poximitAssetTagInternalId === undefined ? event.proximityAssetTagInternalId : event.poximitAssetTagInternalId,
+          proximitEmployeeId: event.poximitTrackablesInternalIds ===
+          undefined ? event.proximityTrackablesInternalIds : event.poximitTrackablesInternalIds,
+          proximitEmployeeName: event.poximiTrackableExternalIds ===
+          undefined ? event.proximityTrackableExternalIds : event.poximiTrackableExternalIds,
+          proximitAssetId: event.poximitAssetTagInternalId ===
+          undefined ? event.proximityAssetTagInternalId : event.poximitAssetTagInternalId,
           type: event.type,
           time: event.time
 

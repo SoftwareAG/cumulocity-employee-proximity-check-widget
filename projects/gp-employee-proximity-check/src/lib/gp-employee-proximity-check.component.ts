@@ -119,13 +119,14 @@ export class GpEmployeeProximityCheckComponent implements OnInit, OnDestroy {
      this.unsubscribeRealTime$.next();
      this.unsubscribeRealTime$.complete();
   }
-
+  // Fetch the device specific events for the time period (number of days) provided
   async fetchEvents() {
   if (this.searchDeviceName !== '' && this.providedDays != null) {
    this.TagsAtRisk.length = 0;
 
    this.AlertsCount = 0;
    const now = moment();
+  // Get device External ID
    const identity: IExternalIdentity = {
     type: this.config.externalIdType,
     externalId: this.searchDeviceName
@@ -174,7 +175,11 @@ export class GpEmployeeProximityCheckComponent implements OnInit, OnDestroy {
   }
 
   }
-
+  /* To mail the generated specific employee proximit check detials 
+     - get the proximit data based on search inputs
+     - get user emailid by making use of session login details
+     - invoke post call to webm.io flow to generate a email 
+  */
   exportReport() {
     this.progressbar = 1;
     const reportData = this.dataSource.data;

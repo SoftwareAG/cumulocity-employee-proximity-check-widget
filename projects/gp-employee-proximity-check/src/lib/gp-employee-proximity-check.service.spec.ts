@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GpLibEmployeeProximityCheckService } from './gp-employee-proximity-check.service';
+import { GpEmployeeProximityCheckService } from './gp-employee-proximity-check.service';
 
-describe('GpLibEmployeeProximityCheckService', () => {
+describe('GpEmployeeProximityCheckService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: GpLibEmployeeProximityCheckService = TestBed.get(GpLibEmployeeProximityCheckService);
+    const service: GpEmployeeProximityCheckService = TestBed.get(GpEmployeeProximityCheckService);
     expect(service).toBeTruthy();
   });
 });

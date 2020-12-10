@@ -16,11 +16,6 @@ To deliver the expected functionality one needs to set the following as a query 
 Unique Id(required) - This takes employee name as input
 Days(required)
 
-## UseCase
-![Employee_Proximity_check](https://user-images.githubusercontent.com/70568133/101735215-8fd6af80-3ae7-11eb-8699-3386caa61628.PNG)
-
-
-
 
 ## Features
 *  **Supports reload chart:** The widget gets a list of Employee and its associated tag that came in contact with a provided particular Employee 
@@ -111,7 +106,7 @@ Cumulocity 1006.11.0 onward (should also work for an older version of Cumulocity
 3. Install the Binary file in the app builder.
 
 ```
-npm i <binary  file  path>/gp-lib-employee-proximity-check-1.0.1.tgz
+npm i <binary  file  path>/gp-lib-employee-proximity-check-1.0.0.tgz
 ```
 
 4. Open index.less located at /cumulocity-app-builder/ui-assets/
@@ -185,7 +180,7 @@ npm run deploy
 3. Install the Binary file in the app builder.
 
 ```
-npm i <binary  file  path>/gp-employee-proximity-check-1.0.1.tgz
+npm i <binary  file  path>/gp-employee-proximity-check-1.0.0.tgz
 ```
 
 **Note:** If you don't find the branding folder then please follow [Cumulocity Branding](https://cumulocity.com/guides/web/angular/#branding)

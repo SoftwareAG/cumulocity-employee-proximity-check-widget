@@ -14,9 +14,6 @@ Example: c8y_TrackableId
 Group(Devices) specific Event Type (input- required)
 Example: c8y_AssetTagProximityUpdateFromParent
 
-Report Generation webhook URL(input-required)
-Example: https://democenter.int-aws-us.webmethods.io/runflow/run/1K8LpelOI0
-
 To deliver the expected functionality one needs to set the following as a query parameter in widget  UI.
 
 Unique Id(required) - This takes employee name as input

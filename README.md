@@ -1,10 +1,7 @@
-# Cumulocity Widget - Employee Proximity check widget
+# Cumulocity Widget - Employee Proximity check widget[<img width="35" src="https://user-images.githubusercontent.com/67993842/97668428-f360cc80-1aa7-11eb-8801-da578bda4334.png"/>](https://github.com/SoftwareAG/cumulocity-employee-proximity-check-widget/releases/download/1.0.0/gp-employee-proximity-check-runtime-widget-1.0.0.zip)
 
 ##  Overview
-This is an Angular 8 Chart Widget designed for Smart Social Distancing Demo. this widget displays list of Employee and its associated tag that came in contact with a particular Employee and also able to send a Report via Email
-
-The Reporting invokes webmethods.io integration flow webhook call in the backend which takes user-session information and Widget filter-based generated data as an input and send out an email to respective logged in person.
-
+This is an Angular 8 Chart Widget designed for Smart Social Distancing Demo. this widget displays list of Employee and its associated tag that came in contact with a particular Employee.
 
 To deliver the expected functionality one needs to set the following configuration parameters:
 
@@ -18,6 +15,12 @@ To deliver the expected functionality one needs to set the following as a query 
 
 Unique Id(required) - This takes employee name as input
 Days(required)
+
+## UseCase
+![Employee_Proximity_check](https://user-images.githubusercontent.com/70568133/101735215-8fd6af80-3ae7-11eb-8699-3386caa61628.PNG)
+
+
+
 
 ## Features
 *  **Supports reload chart:** The widget gets a list of Employee and its associated tag that came in contact with a provided particular Employee 
@@ -35,7 +38,6 @@ Alternatively, create an issue in the **Issues** tab at the top of the window (s
 
 Cumulocity 1006.11.0 onward (should also work for an older version of Cumulocity)
 
-## Installation
   
 **Supported Cumulocity Environments:**
   
@@ -73,7 +75,13 @@ Cumulocity 1006.11.0 onward (should also work for an older version of Cumulocity
  
 "moment": "^2.24.0",
 
+
 ```
+## Installation
+## Runtime Widget Installation (Without Application Deployment)
+
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-employee-proximity-check-widget/releases/download/1.0.0/gp-employee-proximity-check-runtime-widget-1.0.0.zip) and follow runtime deployment instruction from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader)
+
 **Installation Steps For App Builder:**
 
 **Note:** If you are new to App Builder or not yet downloaded/clone app builder code then please follow [App builder documentation(Build Instructions)](https://github.com/SoftwareAG/cumulocity-app-builder) before proceeding further.
@@ -97,7 +105,7 @@ Cumulocity 1006.11.0 onward (should also work for an older version of Cumulocity
      Installation command: ```npm i moment@2.24.0 ``` 
 
 
-2. Grab the Employee Proximity check  Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-proximity-check/storage/show/Releases/gp-lib-employee-proximity-check-1.0.1.tgz)**  (or)  create your own binary file by following  [Build Instructions
+2. Grab the Employee Proximity check  Widget **[Latest Release Binary](https://github.com/SoftwareAG/cumulocity-employee-proximity-check-widget/releases/download/1.0.0/gp-employee-proximity-check-1.0.0.tgz)**  (or)  create your own binary file by following  [Build Instructions
 ](## Build Instructions).
 
 3. Install the Binary file in the app builder.
@@ -171,7 +179,7 @@ npm run deploy
      Installation command: ```npm i moment@2.24.0 ``` 
 
 
-2. Grab the Employee Grid Widget **[Latest Release Binary]((https://labcase.softwareag.com/projects/gp-proximity-check/storage/show/Releases/gp-employee-proximity-check-1.0.1.tgz)** (or)  create your own binary file by following  [Build Instructions
+2. Grab the Employee Grid Widget **[Latest Release Binary]((https://github.com/SoftwareAG/cumulocity-employee-proximity-check-widget/releases/download/1.0.0/gp-employee-proximity-check-1.0.0.tgz)** (or)  create your own binary file by following  [Build Instructions
 ](## Build Instructions).
 
 3. Install the Binary file in the app builder.
@@ -239,7 +247,7 @@ npm run deploy
 
 1. Clone the repository:
 ```
-git clone  https://labcase.softwareag.com/labcase/gp-proximity-check.git
+git clone  https://github.com/SoftwareAG/cumulocity-markdown-widget.git
 ```
 2. Change directory:
 
@@ -290,7 +298,7 @@ This guide will teach you how to add a widget in your existing or new dashboard.
 Congratulations! Employee Proximity Check Widget is configured.
   
 ## User Guide
-
+![Employee_Proximity_check_Conf](https://user-images.githubusercontent.com/70568133/101735179-7cc3df80-3ae7-11eb-89bc-663559eaaceb.PNG)
 
 1.Group(Devices) specific ExternalID Type (input - required)
 Example: c8y_TrackableId
@@ -298,23 +306,8 @@ Example: c8y_TrackableId
 2.Group(Devices) specific Event Type (input- required)
 Example: c8y_AssetTagProximityUpdateFromParent
 
-3.Report Generation webhook URL(input-required)
-Example: https://democenter.int-aws-us.webmethods.io/runflow/run/1K8LpelOI0
-
-
 ## Troubleshooting
 
-### Report a bug
-
-Create a new issue in the [Issues](https://labcase.softwareag.com/projects/gp-proximity-check/issues) section of this Labcase project and assign it to *Owner Full Name*. Set the tracker to `Bug` and provide a meaningful title. Make sure to describe the bug as detailed as possible and how the bug can be reproduced.
-
-### Request a feature
-
-Create a new issue in the [Issues](https://labcase.softwareag.com/projects/gp-proximity-check/issues) section of this Labcase project and assign it to *Owner Full Name*. Set the tracker to `Requirement` and provide a meaningful title. Shortly describe the feature.
-
-
-------------------------------
-  
   
 This widget is provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
   

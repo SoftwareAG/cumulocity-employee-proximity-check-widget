@@ -175,39 +175,6 @@ export class GpEmployeeProximityCheckComponent implements OnInit, OnDestroy {
   }
 
   }
-  /* To mail the generated specific employee proximit check detials 
-     - get the proximit data based on search inputs
-     - get user emailid by making use of session login details
-     - invoke post call to webm.io flow to generate a email 
-  */
-  exportReport() {
-    this.progressbar = 1;
-    const reportData = this.dataSource.data;
-    reportData.forEach((x) => {
-      x.time = moment(x.time).format('DD/MM/YYYY HH:mm:ss');
-    });
-    if (this.appStateService.currentUser.value.email) {
-      const exportData = {
-        data: reportData,
-        request: {
-          emplname: this.searchDeviceName,
-          noOfDays: this.providedDays,
-          emailId: this.appStateService.currentUser.value.email
-        }
-
-      };
-      console.log(exportData);
-
-      this.http.post(this.config.placeOrderUrl, exportData).subscribe((val) => {
-        alert('Submitted Successfully');
-        this.progressbar = 0;
-      });
-    } else {
-      alert('Unable to fetch user details');
-    }
-
-
-  }
 }
 
 

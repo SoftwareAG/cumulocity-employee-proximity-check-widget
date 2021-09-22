@@ -23,12 +23,6 @@ Days(required)
 *  **Supports breaches by the particular employee:** Based on widget UI input.
 
 
-## Owners
-
-Contact the owner for more information and feedback: *developer1@softwareag.com*
-
-Alternatively, create an issue in the **Issues** tab at the top of the window (see also the troubleshooting section below).
-
 ## Supported Product Versions
 
 Cumulocity 1006.11.0 onward (should also work for an older version of Cumulocity)

@@ -69,7 +69,7 @@ Cumulocity 1006.11.0 onward (should also work for an older version of Cumulocity
 ## Installation
 ## Runtime Widget Installation (Without Application Deployment)
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-employee-proximity-check-widget/releases/download/1.0.0/gp-employee-proximity-check-runtime-widget-1.0.0.zip) and follow runtime deployment instruction from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader)
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-employee-proximity-check-widget/releases/download/1.0.0/gp-employee-proximity-check-runtime-widget-1.0.0.zip) and use application builder to install your runtime widget.
 
 **Installation Steps For App Builder:**
 
